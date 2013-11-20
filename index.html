@@ -114,20 +114,10 @@
 
         }
        
-       function start_two(){
-         $("#main").load("./start_two.html")
-         classAction();
-       };
-       
-       function restart_two(){
-         $("#main").load("./restart_two.html")
-         classAction();  
-       };
-       
-       function increase_two(){
-         $("#main").load("./increase_two.html")
-         classAction();  
-       };
+       function pageLoader(page){
+           $("#main").load("./"+page);
+           classAction();
+       }
         
     </script>
 

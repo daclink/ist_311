@@ -1,0 +1,29 @@
+<div class="hero-unit">
+    <p>I will get my 2% today!</p>
+    <ul>
+        <li>Walk the dogs in the morning</li>
+    </ul>
+</div>  
+    <hr>
+    <footer>
+        <p>&copy; YourTwoPercent 2013</p>
+    </footer>
+    
+    <script>
+    $(".span4").hover(
+                    function(){
+                        $(this).addClass("clickable");
+                        
+                    },
+                    function(){
+                        $( this ).removeClass("clickable");
+                    }
+                );
+     $("div.span4").on({click: function(){
+                console.log("Hey Alright" + this.id);
+                    if (this.classList[1] == "clickable"){
+                         pageLoader(this.id+".html");
+                    }
+                }
+        });
+    </script>
