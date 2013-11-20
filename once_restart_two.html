@@ -18,11 +18,9 @@
                 );
      $("div.span4").on({click: function(){
                 console.log("Hey Alright" + this.id);
-                if (this.classList[1] == "clickable"){
-                    var blah = window[this.id];
-                    blah();
-                    
-                }
+                    if (this.classList[1] == "clickable"){
+                        pageLoader(this.id+".html");
                     }
+                }
         });
     </script>
