@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>How do you get your two percent?</title>
+    <title>your 2%</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,6 +28,9 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
+    
+
+    
   </head>
 
   <body>
@@ -40,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">yourTwoPercent.com</a>
+          <a class="brand" href="#" onclick=home_two()>yourTwoPercent.org</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#" onclick=home_two(); id="home_link">Home</a></li>
@@ -74,6 +77,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
+    <!--script src="assets/js/backbone.js/backbone-min.js"></script-->
+    <script src="assets/js/less.js/less.min.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
@@ -87,6 +92,16 @@
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
     
+        <!--script type="text/javascript" charset="utf-8" src="routes/routes.js"></script>        
+        <script>
+            // Initiate the router
+            var app_router = new AppRouter;
+            // Start Backbone history a neccesary step for bookmarkable URL's
+            Backbone.history.start();
+        
+        </script-->
+    
+    
     <script>
         $(document).ready(function(){
             home_two();
@@ -96,7 +111,7 @@
        function classAction(ID_TO_change){
            $(".active").removeClass("active");
            $(ID_TO_change).parent().addClass("active");
-       }
+       } 
        
        
        function about_two(data) {
