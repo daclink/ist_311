@@ -15,6 +15,7 @@ var AppRouter = Backbone.Router.extend({
     },
     defaultRoute: function( ){
         pageLoader("home");
+        alert("home!");
         
     }
 });
