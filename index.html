@@ -29,6 +29,72 @@
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
         <link rel="shortcut icon" href="assets/ico/favicon.png">
 
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/underscore.js"></script>
+        <script src="assets/js/backbone.js/backbone-min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="routes/routes.js"></script>
+        <script>
+            
+             function classAction(ID_TO_change) {
+                $(".active").removeClass("active");
+                $(ID_TO_change).parent().addClass("active");
+            }
+
+
+            function about_two(data) {
+                console.log("about was clicked" + this);
+                $("#main").load("./about.html");
+                classAction("#about_link");
+                //     $("#home_link").addClass("fishFace");
+
+            }
+
+            function home_two() {
+                //$(".active").removeClass("active");
+                $("#main").load("./home.html");
+                classAction("#home_link");
+
+            }
+
+            function pageLoader(page) {
+                
+                if (!page) {
+                    console.log("Page is null");
+                    page = "home.html";
+                } 
+                else if(!page.split(".")[1]) {
+                    console.log("Page is " + page);
+                    page += ".html";
+                };
+                
+                console.log("firing pageLoader with == " + page);
+                
+                $("#main").load("./" + page);
+                classAction();
+            }
+            
+            var frag = window.location.href.split("#")[1];
+            
+            
+            var app_router = new AppRouter;
+
+            app_router.on('route:defaultRoute', function(actions) {
+                console.log("Default route fired");
+            });
+
+            // Start Backbone history a necessary step for bookmarkable URL's
+            Backbone.history.start();
+            
+            /*
+            var pathURL = window.location.href;
+            console.log("pathURL == " + pathURL + " split is " + pathURL.split("#"));
+            */
+            
+            
+            
+            //app_router.navigate(window.location.href.split("#")[1]);
+        </script>
+
 
 
     </head>
@@ -76,7 +142,6 @@
         <!-- Le javascript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="assets/js/jquery.js"></script>
 
 
         <script src="assets/js/bootstrap-transition.js"></script>
@@ -92,60 +157,31 @@
         <script src="assets/js/bootstrap-carousel.js"></script>
         <script src="assets/js/bootstrap-typeahead.js"></script>
         <script src="assets/js/less.js/less.min.js"></script>
-        <script src="assets/js/underscore.js"></script>
-        <script src="assets/js/backbone.js/backbone-min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="routes/routes.js"></script>         
+
 
 
 
         <script>
-                        $(document).ready(function() {
-                            home_two();
-                            /*
-                             var AppRouter = Backbone.Router.extend({
-                             routes: {
-                             "*actions": "defaultRoute" // matches http://example.com/#anything-here
-                             }
-                             }); */
-                            // Initiate the router
-                            var app_router = new AppRouter;
+            $(document).ready(function() {
+                //home_two();
 
-                            app_router.on('route:defaultRoute', function(actions) {
-                                home_two();
-                                console.log("Default route fired")
-                            })
+                //var pathURL = window.location.href;
 
-                            // Start Backbone history a necessary step for bookmarkable URL's
-                            Backbone.history.start();
+                /*
+                 var AppRouter = Backbone.Router.extend({
+                 routes: {
+                 "*actions": "defaultRoute" // matches http://example.com/#anything-here
+                 }
+                 }); */
+                // Initiate the router
 
+                console.log("URL fragment == " + frag);
+                
+                pageLoader(frag);
+ 
+            });
 
-                        });
-
-                        function classAction(ID_TO_change) {
-                            $(".active").removeClass("active");
-                            $(ID_TO_change).parent().addClass("active");
-                        }
-
-
-                        function about_two(data) {
-                            console.log("about was clicked" + this);
-                            $("#main").load("./about.html");
-                            classAction("#about_link");
-                            //     $("#home_link").addClass("fishFace");
-
-                        }
-
-                        function home_two() {
-                            //$(".active").removeClass("active");
-                            $("#main").load("./home.html");
-                            classAction("#home_link");
-
-                        }
-
-                        function pageLoader(page) {
-                            $("#main").load("./" + page);
-                            classAction();
-                        }
+           
 
         </script>
 
