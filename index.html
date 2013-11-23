@@ -69,8 +69,8 @@
                 
                 console.log("firing pageLoader with == " + page);
                 
-                $("#main").load("./" + page);
-                classAction();
+                $("#main").load("./" + page, classAction());
+                
             }
             
             var frag = window.location.href.split("#")[1];
