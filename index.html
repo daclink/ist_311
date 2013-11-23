@@ -35,11 +35,32 @@
         <script type="text/javascript" charset="utf-8" src="routes/routes.js"></script>
         <script>
             
-             function classAction(ID_TO_change) {
+             function classAction() {
+                   
+                var ID_TO_change = window.location.href.split("#")[1];
+                console.log("entering ClassAction : " + ID_TO_change); 
+                
+                
+        
+                if(ID_TO_change === ""){
+                    console.log("is it just hash? " + ID_TO_change);
+                    ID_TO_change = "#home_link";
+                }
+                
+                if(ID_TO_change[0] !== "#"){
+                    console.log("no hash? no problem " + ID_TO_change);
+                    ID_TO_change = "#"+ID_TO_change;
+                }
+                
+                if(ID_TO_change.split("_")[1] != "link"){
+                    console.log("no link?" + ID_TO_change);
+                    ID_TO_change += "_link";
+                };
+                
+                console.log("classAction: " + ID_TO_change);
                 $(".active").removeClass("active");
                 $(ID_TO_change).parent().addClass("active");
             }
-
 
             function about_two(data) {
                 console.log("about was clicked" + this);
@@ -52,29 +73,30 @@
             function home_two() {
                 //$(".active").removeClass("active");
                 $("#main").load("./home.html");
-                classAction("#home_link");
+                classAction();
 
             }
 
             function pageLoader(page) {
                 
                 if (!page) {
-                    console.log("Page is null");
+                    //console.log("Page is null");
                     page = "home.html";
                 } 
                 else if(!page.split(".")[1]) {
-                    console.log("Page is " + page);
+                    //console.log("Page is " + page);
                     page += ".html";
                 };
                 
                 console.log("firing pageLoader with == " + page);
                 
-                $("#main").load("./" + page, classAction(page+"_link"));
+                $("#main").load("./" + page, function(){
+                    classAction();
+                });
                 
             }
             
             var frag = window.location.href.split("#")[1];
-            
             
             var app_router = new AppRouter;
 
