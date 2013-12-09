@@ -1,0 +1,64 @@
+<div class="hero-unit">
+    <h1>The 2% team!</h1>
+    <p>
+    </p> 
+    <p>Start your investment right now! </p>
+</div>   
+<!-- Example row of columns -->
+<div class="row">
+    <div id='dac' class="span4">
+
+        <h2>Drew Clinkenbeard</h2>
+        <p>I will get my 2% today!</p>
+    </div>
+    <div id='jec' class="span4">
+
+        <h2>Jennifer Clinkenbeard</h2>
+        <p>I will get my 2% today!</p>
+    </div>
+
+    <div id='gf' class="span4">
+
+        <h2>Guillame Faddoul</h2>
+        <p>I will get my 2% today!</p>
+    </div>
+
+    <div id='hk' class="span4">
+
+        <h2>Heejung Kang</h2>
+        <p>I will get my 2% today!</p>
+    </div>
+
+    <div id='smm' class="span4">
+        <h2>Sean Mayes</h2>
+        <p>I will get my 2% today!</p>
+    </div>
+
+    <div id='at' class="span4">
+        <h2>Alp Toygar</h2>
+        <p>I will get my 2% today!</p>
+    </div>
+</div>
+<hr>
+<footer>
+    <p>&copy; YourTwoPercent 2013</p>
+</footer>
+
+<script>
+    $(".span4").hover(
+            function() {
+                $(this).addClass("clickable");
+
+            },
+            function() {
+                $(this).removeClass("clickable");
+            }
+    );
+    $("div.span4").on({click: function() {
+            console.log("Hey Alright" + this.id);
+            if (this.classList[1] == "clickable") {
+                pageLoader(this.id + ".html");
+            }
+        }
+    });
+</script>
