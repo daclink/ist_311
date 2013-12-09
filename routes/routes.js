@@ -39,15 +39,15 @@ var AppRouter = Backbone.Router.extend({
     once_restart_two: function( ) {
         // Note the variable in the route definition being passed in here
         console.log("in routes, firing Once_start_two");
-        pageLoader("once_start_two");
+        pageLoader("once_restart_two");
     },
     span_restart_two: function( ) {
         // Note the variable in the route definition being passed in here
-        pageLoader("span_start_two");
+        pageLoader("span_restart_two");
     },
     always_restart_two: function( ) {
         // Note the variable in the route definition being passed in here
-        pageLoader("always_start_two");
+        pageLoader("always_restart_two");
     },
     about: function( ) {
         // Note the variable in the route definition being passed in here
