@@ -1,45 +1,59 @@
 <div class="hero-unit">
     <h1>I don't get my 2% every day but I would like too.</h1>
-<p>Start your journey to a better life</p>
+    <p>A percentage is a pf a value based on a total of 100%. 
+        Now if I asked you what is 2%, what would be your answer? So here we go. 
+        What is 2%? What is 2% of your income, your body weight, your partnership in your business, or your return on investment in the stock market. 
+        Your 2% may end up with some funny examples! Just use your imagination! But right now we want to talk about something else. We want to talk about your physical activity. 
+        The Mayo clinic advises 30 minutes of physical activity a day. This should be sufficient for staying healthy and fit. 30 minutes is only 2% of 24 hours. So 30 minutes is equal to 2% of your day.
+        Think about that: if you take 2% of your time in a day for physical activity, would happen?! Scientists say that physical activities release endorphins, hormones that makes us happier, and it 
+        also makes us think positively. Imagine that you make 2% investment in a day and at the end of the day you sleep better, think better, your relationships are better, your sex life is better, this could make your productivity better, which will make your income better, your savings are better, in the end, everything is better! So why not start your 2% physical activity investment today and get the returns right away! There is no better investment than your health. 
+    </p> 
+    <p>Start your investment right now! </p>
 </div>   
-  <!-- Example row of columns -->
-      <div class="row">
-        <div id='once_start_two' class="span4">
-          <h2>I will try it once</h2>
-          <p>I will get my 2% today!</p>
-          
-        </div>
-        <div id='span_start_two' class="span4">
-          <h2>I'll try it for two weeks</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          
-       </div>
-        <div id='always_start_two' class="span4">
-          <h2>from now on!</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          
-        </div>
-      </div>
-    <hr>
-    <footer>
-        <p>&copy; YourTwoPercent 2013</p>
-    </footer>
-    
-    <script>
+<!-- Example row of columns -->
+<div class="row">
+    <div id='once_start_two' class="span4">
+        <a href="#once_start_two">
+            <h2>I will try it once</h2>
+            <p>I will get my 2% today!</p>
+
+        </a>
+    </div>
+    <div id='span_start_two' class="span4">
+        <a href="#span_start_two">
+            <h2>I'll try it for one week</h2>
+            <p>I can do it for <em>at least</em> a week.. </p>
+
+        </a>
+    </div>
+    <div id='always_start_two' class="span4">
+        <a href="#always_start_two">
+            <h2>I can get my 2 % from now on!</h2>
+            <p>Nothing would make me happier than getting my 2% everyday! How can I do it?</p>
+        </a>
+
+    </div>
+</div>
+<hr>
+<footer>
+    <p>&copy; YourTwoPercent 2013</p>
+</footer>
+
+<script>
     $(".span4").hover(
-                    function(){
-                        $(this).addClass("clickable");
-                        
-                    },
-                    function(){
-                        $( this ).removeClass("clickable");
-                    }
-                );
-     $("div.span4").on({click: function(){
-                console.log("Hey Alright" + this.id);
-                if (this.classList[1] == "clickable"){
-                     pageLoader(this.id+".html");
-                }
-                    }
-        });
-    </script>
+            function() {
+                $(this).addClass("clickable");
+
+            },
+            function() {
+                $(this).removeClass("clickable");
+            }
+    );
+    $("div.span4").on({click: function() {
+            console.log("Hey Alright" + this.id);
+            if (this.classList[1] == "clickable") {
+                pageLoader(this.id + ".html");
+            }
+        }
+    });
+</script>
