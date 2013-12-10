@@ -1,45 +1,49 @@
 <div class="hero-unit">
-<p>more than 2%...</p>
+    <p>Congratulations ! At this point, you should have realized that 30 minutes a day, or 2%, of physical activities can actually fit in your daily schedule. You may even have developed your own exercise routine and you are definitely able to notice improvement in your overall health.
+        But after all those efforts, you may have realized that you were not as busy as you think you were and you may be able to squeeze a few more percent in your schedule. Maybe you are just realizing how easy it is to do some simple workout without spending money on equipments or gym subscription and you want to spend more time doing so you can get healthier. Whatever your reason is, you are ready to Increase your goal and Make each percent of your day count.</p>
 </div>   
-  <!-- Example row of columns -->
-      <div class="row">
-        <div id='once_increase_two'class="span4">
-          <h2>I will try to get more than 2% today</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          
-        </div>
-        <div id='span_increase_two' class="span4">
-          <h2>I'll get more than 2% for 5 days</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          
-       </div>
-        <div id='always_increase_two' class="span4">
-          <h2>I will commit to getting more than 2%</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          
-        </div>
-      </div>
-    <hr>
-    <footer>
-        <p>&copy; YourTwoPercent 2013</p>
-    </footer>
-    
-    <script>
+<!-- Example row of columns -->
+<div class="row">
+    <div id='once_increase_two' class="span4">
+        <a href='#once_increase_two' >
+            <h2>I will try to get more than 2% today</h2>
+            <p>I will keep it up! </p>
+        </a>
+    </div>
+    <div id='span_increase_two' class="span4">
+        <a href='#span_increase_two'>
+            <h2>I'll get more than 2% for 2 weeks</h2>
+            <p>I will do MORE!</p>
+        </a>
+    </div>
+    <div id='always_increase_two' class="span4">
+        <a href='#alays_increase_two'>
+            <h2>I will commit to getting more than 2%</h2>
+            <p>I will get more than 2% from now on</p>
+        </a>          
+    </div>
+</div>
+<hr>
+<footer>
+    <p>&copy; YourTwoPercent 2013</p>
+</footer>
+
+<script>
     $(".span4").hover(
-                    function(){
-                        $(this).addClass("clickable");
-                        
-                    },
-                    function(){
-                        $( this ).removeClass("clickable");
-                    }
-                );
-     $("div.span4").on({click: function(){
-                console.log("Hey Alright" + this.id);
-                if (this.classList[1] == "clickable"){
-                    pageLoader(this.id+".html");
-                    
-                }
-                    }
-        });
-    </script>
+            function() {
+                $(this).addClass("clickable");
+
+            },
+            function() {
+                $(this).removeClass("clickable");
+            }
+    );
+    $("div.span4").on({click: function() {
+            console.log("Hey Alright" + this.id);
+            if (this.classList[1] == "clickable") {
+                pageLoader(this.id + ".html");
+
+            }
+        }
+    });
+</script>
