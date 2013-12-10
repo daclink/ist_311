@@ -1,7 +1,50 @@
 <div class="hero-unit">
-    <p>What's your two percent? is a movement about movement. The idea is to get people up and moving.
-        To lead to a healthier life and a better lifestyle.</p>
+    <h1>The 2% team!</h1>
+    <p>Committed to helping you on the road to a better life</p> 
+    <p>Why 2%?</p>
+
+    <ul>
+        <li>Did you know that  the recommended amount of exercise (30 minutes daily) as a percentage of minutes in a day is only about 2% of the day?
+           
+            <ul>
+                <li>
+                    (24 hours x 60 minutes = 1440 minutes). hours x 60 minutes =1440 minutes)Since 30/1440 =.02083, 30 minutes is roughly equivalent to 2% of a person’s day 
+                </li>
+            </ul>
+        </li>
+        <li>Why exercise? A recent study by the Center for Disease Control reports that 80% of American adults do not get the recommended amounts of exercise, potentially setting themselves up for years of health problems. Major health problems linked to physical inactivity include obesity, Type II diabetes, and heart disease. A 2012 study linked physical inactivity to more than 5 million deaths worldwide per year--more than are caused by smoking. 80% of Americans do not get enough exercise to help prevent these problems. 
+        </li>
+        <li>
+            Additionally, many studies have been conducted that link exercise to increased happiness, mood, and mental well-being. It mimics the effect of anti-depressants on the brain, and can even be responsible for the creation of new brain cells. Thomas Jefferson once said, “Exercise and application produce order in our affairs, health of body, cheerfulness of mind, and these make us precious to our friends.”
+        </li>
+        <li>
+            Who says 30 minutes is a good amount? The Mayo Clinic states that as a general goal, adults aged 18-64 should aim for at least 30 minutes of physical activity per day. Although the Department of Health and Human Services identifies more specific objectives, most experts agree that 30 minutes per day is a healthy level of physical activity for this group irrespective of gender, race, ethnicity or income level. The exception to the rule is individuals with specific medical conditions limiting mobility</li>
+    </ul>
+
+
 </div>   
+<!-- Example row of columns -->
+
+<hr>
 <footer>
     <p>&copy; YourTwoPercent 2013</p>
 </footer>
+
+<script>
+    $(".span4").hover(
+            function() {
+                $(this).addClass("clickable");
+
+            },
+            function() {
+                $(this).removeClass("clickable");
+            }
+    );
+    $("div.span4").on({click: function() {
+            console.log("Hey Alright" + this.id);
+            if (this.classList[1] == "clickable") {
+                pageLoader(this.id + ".html");
+            }
+        }
+    });
+</script>

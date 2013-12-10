@@ -1,29 +1,37 @@
 <div class="hero-unit">
     <h1>I will try to get more than 2% today!</h1>
-<p>You are now wondering how to reach this new goal. You are already taking advantage of every opportunities you have to reach your 2% and you don't know if there is much more you can do. Well, the best way to be sure is to try.
-Let's first start by looking at our schedule and make sure we don't have more free time than we thought. What about sharing your 2% journey with friends and family ? They may be able to discover new ways of exercising  you didn't think of.
-And once you realize that you have an opportunity to increase your 2%, Jump on it ! Literally ! Just try it once, just to see how you feel !</p>
+    <p>First, what is your goal for today? We suggest increasing the time spent exercising from 30 minutes to at least 45 minutes. An easy way to do this is to “add on” to what you are already doing. For example:
+    </p>
+    <p>
+        If you take a daily walk, try picking up the pace a bit and going two blocks farther before you turn around.
+    </p>
+    <p>
+        If you exercise with a timed class or video, spend 15 minutes stretching or doing low-impact strength-building exercises afterwards.
+    </p>
+    <p>
+        If you exercise in several short blocks of time (5 or 10 or 15 minutes each), add another one when you get up in the morning, during your lunch break, or before going to bed.
+    </p>
 </div>   
-    <hr>
-    <footer>
-        <p>&copy; YourTwoPercent 2013</p>
-    </footer>
-    
-    <script>
+<hr>
+<footer>
+    <p>&copy; YourTwoPercent 2013</p>
+</footer>
+
+<script>
     $(".span4").hover(
-                    function(){
-                        $(this).addClass("clickable");
-                        
-                    },
-                    function(){
-                        $( this ).removeClass("clickable");
-                    }
-                );
-     $("div.span4").on({click: function(){
-                console.log("Hey Alright" + this.id);
-                if (this.classList[1] == "clickable"){
-                    pageLoader(this.id+".html");   
-                }
-                    }
-        });
-    </script>
+            function() {
+                $(this).addClass("clickable");
+
+            },
+            function() {
+                $(this).removeClass("clickable");
+            }
+    );
+    $("div.span4").on({click: function() {
+            console.log("Hey Alright" + this.id);
+            if (this.classList[1] == "clickable") {
+                pageLoader(this.id + ".html");
+            }
+        }
+    });
+</script>

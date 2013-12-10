@@ -1,35 +1,36 @@
 <div class="hero-unit">
-<h1>I will try it for one day!</h1>
-<p>
-Now, it is time to plan a tailored strategy designed for you. You may still have difficulty finding 2% of your day for exercise. Then, you don’t have to spend all 30 minutes at once working out, but instead, it would be a good strategy for you to divide the time into pieces adjusting it to your daily lifestyle. For example, you can stretch for 10 minutes when you wake up and then go for a walk for 10 minutes during your lunch time. You can have another stretch for 10 minutes before 
-going to bed. If you design your tailored strategy like this, you will find it easier to restart getting your two percent than before. </p>
-</div>   
-<ul>
-    <li>Try to get your exercise in little pieces, 10 minutes at a time.</li>
-    <li>Stretch in the morning, at lunch, and before bed</li>
-    <li>Go for a walk on your lunch break!</li>
-    <li>Tailor your exercise to fit your busy life</li>
-</ul>
-    <hr>
-    <footer>
-        <p>&copy; YourTwoPercent 2013</p>
-    </footer>
-    
-    <script>
+    <h1>I will try it for one day!</h1>
+    <p>
+        Now, it is time to plan a tailored strategy designed for you. You may still have difficulty finding 2% of your day for exercise. Then, you don’t have to spend all 30 minutes at once working out, but instead, it would be a good strategy for you to divide the time into pieces adjusting it to your daily lifestyle. For example, you can stretch for 10 minutes when you wake up and then go for a walk for 10 minutes during your lunch time. You can have another stretch for 10 minutes before 
+        going to bed. If you design your tailored strategy like this, you will find it easier to restart getting your two percent than before. </p>
+
+    <ul>
+        <li>Try to get your exercise in little pieces, 10 minutes at a time.</li>
+        <li>Stretch in the morning, at lunch, and before bed</li>
+        <li>Go for a walk on your lunch break!</li>
+        <li>Tailor your exercise to fit your busy life</li>
+    </ul>
+</div>  
+<hr>
+<footer>
+    <p>&copy; YourTwoPercent 2013</p>
+</footer>
+
+<script>
     $(".span4").hover(
-                    function(){
-                        $(this).addClass("clickable");
-                        
-                    },
-                    function(){
-                        $( this ).removeClass("clickable");
-                    }
-                );
-     $("div.span4").on({click: function(){
-                console.log("Hey Alright" + this.id);
-                    if (this.classList[1] == "clickable"){
-                        pageLoader(this.id+".html");
-                    }
-                }
-        });
-    </script>
+            function() {
+                $(this).addClass("clickable");
+
+            },
+            function() {
+                $(this).removeClass("clickable");
+            }
+    );
+    $("div.span4").on({click: function() {
+            console.log("Hey Alright" + this.id);
+            if (this.classList[1] == "clickable") {
+                pageLoader(this.id + ".html");
+            }
+        }
+    });
+</script>

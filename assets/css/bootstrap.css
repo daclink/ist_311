@@ -6136,10 +6136,13 @@ a.badge:focus {
   font-weight: 200;
   line-height: 30px;
   color: inherit;
+  background-image: url('../../assets/img/bg2_crop.jpg');
+  background-repeat: repeat-x;
   background-color: #eeeeee;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
+  
 }
 
 .hero-unit h1 {
