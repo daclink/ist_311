@@ -15,6 +15,9 @@ var AppRouter = Backbone.Router.extend({
         "span_restart_two": "span_restart_two",
         "always_restart_two": "always_restart_two",
         "increase_two": "increase_two",
+        "once_increase_two": "once_increase_two",
+        "span_increase_two": "span_increase_two",
+        "always_increase_two": "always_increase_two",
         "about_us": "about_us",
         "why_two": "why_two",
         "*actions": "defaultRoute" // matches http://example.com/#anything-here
@@ -49,6 +52,22 @@ var AppRouter = Backbone.Router.extend({
     always_restart_two: function( ) {
         // Note the variable in the route definition being passed in here
         pageLoader("always_restart_two");
+    },
+    increase_two: function( ) {
+        // Note the variable in the route definition being passed in here
+        pageLoader("increase_two");
+    },
+    once_increase_two: function( ) {
+        // Note the variable in the route definition being passed in here
+        pageLoader("once_increase_two");
+    },
+    always_increase_two: function( ) {
+        // Note the variable in the route definition being passed in here
+        pageLoader("always_increase_two");
+    },
+    span_increase_two: function( ) {
+        // Note the variable in the route definition being passed in here
+        pageLoader("span_increase_two");
     },
     about: function( ) {
         // Note the variable in the route definition being passed in here
