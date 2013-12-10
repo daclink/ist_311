@@ -16,6 +16,7 @@ var AppRouter = Backbone.Router.extend({
         "always_restart_two": "always_restart_two",
         "increase_two": "increase_two",
         "about_us": "about_us",
+        "why_two": "why_two",
         "*actions": "defaultRoute" // matches http://example.com/#anything-here
     },
     start_two: function( ) {
@@ -56,6 +57,9 @@ var AppRouter = Backbone.Router.extend({
     about_us: function( ) {
         // Note the variable in the route definition being passed in here
         pageLoader("about_us");
+    },
+    why_two: function( ) {
+        pageLoader("why_two");
     },
     defaultRoute: function( ) {
         pageLoader("home");
