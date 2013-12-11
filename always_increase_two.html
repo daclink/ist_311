@@ -1,28 +1,29 @@
 <div class="hero-unit">
     <h1>I will commit to getting more than 2%</h1>    
-<p>Congratulation ! You now realized all the time you actually have and you probably discovered new ways to get your daily physical activities. You also have the motivation to reach beyond your 2%  and get healthier. It is now time to take full advantage of it and bring this moment of happiness and well-being in your daily schedule. And don't forget to share with others: What is your 3%, 5% or even 10% ?</p>
+    <p>Congratulation ! You now realized all the time you actually have and you probably discovered new ways to get your daily physical activities. You also have the motivation to reach beyond your 2%  and get healthier. It is now time to take full advantage of it and bring this moment of happiness and well-being in your daily schedule. And don't forget to share with others: What is your 3%, 5% or even 10% ?</p>
 </div>   
- 
-    <hr>
-    <footer>
-        <p>&copy; YourTwoPercent 2013</p>
-    </footer>
-    
-    <script>
+<hr>
+<p class="text-center text-info"><a href="#about_us">This section by Guillame Faddoul</a></p>
+<hr>
+<footer>
+    <p>&copy; YourTwoPercent 2013</p>
+</footer>
+
+<script>
     $(".span4").hover(
-                    function(){
-                        $(this).addClass("clickable");
-                        
-                    },
-                    function(){
-                        $( this ).removeClass("clickable");
-                    }
-                );
-     $("div.span4").on({click: function(){
-                console.log("Hey Alright" + this.id);
-                if (this.classList[1] == "clickable"){
-                    pageLoader(this.id+".html");
-                }
-                    }
-        });
-    </script>
+            function() {
+                $(this).addClass("clickable");
+
+            },
+            function() {
+                $(this).removeClass("clickable");
+            }
+    );
+    $("div.span4").on({click: function() {
+            console.log("Hey Alright" + this.id);
+            if (this.classList[1] == "clickable") {
+                pageLoader(this.id + ".html");
+            }
+        }
+    });
+</script>
