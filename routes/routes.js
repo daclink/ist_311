@@ -20,6 +20,7 @@ var AppRouter = Backbone.Router.extend({
         "always_increase_two": "always_increase_two",
         "about_us": "about_us",
         "why_two": "why_two",
+        "two_grid": "two_grid",
         "*actions": "defaultRoute" // matches http://example.com/#anything-here
     },
     start_two: function( ) {
@@ -79,6 +80,9 @@ var AppRouter = Backbone.Router.extend({
     },
     why_two: function( ) {
         pageLoader("why_two");
+    },
+    two_grid: function( ) {
+        pageLoader("two_grid");
     },
     defaultRoute: function( ) {
         pageLoader("home");

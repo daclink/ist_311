@@ -1,55 +1,58 @@
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h1>What's YOUR two percent?</h1>
-        <p>What’s Your Two Percent? is a movement about movement. Exercising for thirty minutes, or two percent of a 24-hour day, contributes to better health and a more positive lifestyle. The CGU research team encourages you to “get your two percent” by providing information and suggestions tailored specifically to your exercise levels and interests. Click on a link below to get started!</p>
-        <p><a href="#about" class="btn btn-primary btn-large">What does 2% mean?</a></p>
-       
-      </div>
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit">
+    <h1>What's YOUR two percent?</h1>
+    <p>What’s Your Two Percent? is a movement about movement. Exercising for thirty minutes, or two percent of a 24-hour day, contributes to better health and a more positive lifestyle. The CGU research team encourages you to “get your two percent” by providing information and suggestions tailored specifically to your exercise levels and interests. Click on a link below to get started!</p>
+    <p><a href="#about" class="btn btn-primary btn-large">What does 2% mean?</a></p>
 
-      <!-- Example row of columns -->
-      <div class="row">
-          
-        <div id='start_two' class="span4">
-            <a href="#start_two">
-          <h2>I Want to Get My 2%</h2>
-          <p>I don't get my 2% every day, but I would like to start.</p>
-          </a>
-        </div>
-        <div id='restart_two' class="span4">
-            <a href="#restart_two">
-          <h2>I Used To Get My 2%</h2>
-          <p>I'd like to start getting my 2% again. I know it will make me feel happier and healthier.</p>
-            </a>
-       </div>
-        <div id='increase_two' class="span4">
-            <a href="#increase_two">
-          <h2>I Am Getting My 2%</h2>
-          <p>I would like to maintain my current level of activity or increase my efforts!</p>
-            </a>
-        </div>
-      </div>
-      <hr>
-       <p class="text-center text-info"><a href="http://blog.yourtwopercent.org">For helpful hints, ways to get your 2%, and Encouragement check out the 2% blog!</a></p>
-    <hr>
-  
-    
-    <script>
+</div>
+
+<!-- Example row of columns -->
+<div class="row">
+
+    <div id='start_two' class="span4">
+        <a href="#start_two">
+            <h2>I Want to Get My 2%</h2>
+            <p>I don't get my 2% every day, but I would like to start.</p>
+        </a>
+    </div>
+    <div id='restart_two' class="span4">
+        <a href="#restart_two">
+            <h2>I Used To Get My 2%</h2>
+            <p>I'd like to start getting my 2% again. I know it will make me feel happier and healthier.</p>
+        </a>
+    </div>
+    <div id='increase_two' class="span4">
+        <a href="#increase_two">
+            <h2>I Am Getting My 2%</h2>
+            <p>I would like to maintain my current level of activity or increase my efforts!</p>
+        </a>
+    </div>
+</div>
+<hr>
+<p class="text-center text-info"><a href="http://blog.yourtwopercent.org">For helpful hints, ways to get your 2%, and Encouragement check out the 2% blog!</a>
+</p>
+<p class="text-center text-info">
+    Email us at <a href="mailto:yourtwopercent@gmail.com">yourtwopercent@gmail.com</a>
+</p>
+<hr>
+
+<script>
     $(".span4").hover(
-                    function(){
-                        $(this).addClass("clickable");
-                        
-                    },
-                    function(){
-                        $( this ).removeClass("clickable");
-                    }
-                );
-     $("div.span4").on({click: function(){
-                console.log("Hey Alright" + this.id);
-                    if (this.classList[1] == "clickable"){
-                         pageLoader(this.id+".html");
+            function() {
+                $(this).addClass("clickable");
 
-                    }
-                  }
-        });
-    </script>
+            },
+            function() {
+                $(this).removeClass("clickable");
+            }
+    );
+    $("div.span4").on({click: function() {
+            console.log("Hey Alright" + this.id);
+            if (this.classList[1] == "clickable") {
+                pageLoader(this.id + ".html");
+
+            }
+        }
+    });
+</script>

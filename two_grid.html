@@ -1,0 +1,120 @@
+<div class="hero-unit">
+    <h1>About The Site</h1>
+    <p>This Website is a tool to help you get your daily 2%. We realize that everyone has different exercise goals, and our goal is to tailor yourtwopercent.org to help you meet your goal.</p>
+    <p>
+        The CGU team would like to acknowledge Dr. BJ Fogg of Stanford University, who designed the behavior change pathways that we used in the design of our site. Check out his work at <a href="http://www.behaviorgrid.org/">http://www.behaviorgrid.org/</a>
+    </p>
+    <p>
+        Check out what we have to offer, at a glance:
+    </p> 
+</div>   
+<div class="row pagination-centered" id ="grid_header">
+    <div id='start' class="span4">
+        <a href="#start_two">
+            <h2>Start Getting your 2%</h2>
+        </a>
+    </div>
+
+    <div id='restart' class="span4">
+        <a href="#restart_two">
+            <h2>Restart getting your 2%</h2>
+        </a>
+    </div>
+
+    <div id='increase' class="span4">
+        <a href="#increase_two">
+            <h2>Increase or Maintain Your 2%</h2>
+        </a>
+    </div>
+</div>
+<hr>
+<div class="row pagination-centered" id="grid_once">
+    <div id='start_once' class="span4">
+        <a href="#once_start_two">
+            <h3>I will try it once</h3>
+            <p>I will get my 2% today!</p>
+        </a>
+    </div>
+    <div id='resart_once' class="span4">
+        <a href='#once_restart_two'>
+            <h3>I will try it again for one day</h3>
+            <p>I will get my 2% today.</p>
+        </a>
+    </div>
+
+    <div id='increase_once' class="span4">
+        <a href='#once_increase_two' >
+            <h3>I will try to get more than 2% today</h3>
+            <p>I will keep it up! </p>
+        </a>
+    </div>
+</div>
+<hr>
+<div class="row pagination-centered" id="grid_span">
+    <div id='start_span' class="span4">
+
+        <a href="#span_start_two">
+            <h3>I'll try it for at least a week</h3>
+            <p>I can do it for <em>at least</em> a week.. </p>
+
+        </a>
+    </div>
+
+    <div id='restart_span' class="span4">
+        <a href='#span_restart_two'>
+            <h3>I'll try to get my 2% for two weeks</h3>
+            <p>I will give it a try for 14 days.</p>
+        </a>
+    </div>
+
+    <div id='increase_span' class="span4">
+        <a href='#span_increase_two'>
+            <h3>I'll get more than 2% for 2 weeks</h3>
+            <p>I will do MORE!</p>
+        </a>
+    </div>
+</div>
+<hr>
+<div class="row pagination-centered">
+    <div id='start_always' class="span4">
+        <a href="#always_start_two">
+            <h3>I can get my 2% from now on!</h3>
+            <p>How can I get my 2% every day?</p>
+        </a>
+    </div>
+
+    <div id='restart_always' class="span4">
+        <a href='#always_restart_two'>
+            <h3>I will get my 2% every day again!</h3>
+            <p>I will commit to getting 2% every day from now on!</p>
+        </a>
+    </div>
+
+    <div id='increase_always' class="span4">
+        <a href='#always_increase_two'>
+            <h3>I will commit to getting more than 2%</h3>
+            <p>I will get more than 2% from now on</p>
+        </a>  
+    </div>
+</div>
+<hr>
+
+
+<script>
+    $(".span4").hover(
+            function() {
+                $(this).addClass("clickable");
+
+            },
+            function() {
+                $(this).removeClass("clickable");
+            }
+    );
+    $("div.span4").on({click: function() {
+            console.log("Hey Alright" + this.id);
+            if (this.classList[1] == "clickable") {
+                pageLoader(this.id + ".html");
+            }
+        }
+    });
+</script>
